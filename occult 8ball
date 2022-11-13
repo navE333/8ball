@@ -1,0 +1,27 @@
+@client.command(aliases=['8ball'])
+async def _8ball(ctx, *, question):
+    
+    responses = ['100 percent bro',
+                 'yuh',
+                 'fuck yeah bro',
+                 'yessir',
+                 'you gonna have to sit down for this',
+                 'im magicial so yeah',
+                 'maybe bro maybe',
+                 'you got it',
+                 'si senor',
+                 'all my sources say mhm',
+                 'sorry im high, ask again',
+                 'idk what you said, repeat',
+                 'ill tell you later bro dont worry about it',
+                 'idk if i should tell you',
+                 'let me think about it and ill get back to you',
+                 'nah',
+                 'fuck no tf',
+                 'what kinda bs, nah',
+                 'this is gonna hurt to tell you...',
+                 'you fucking with me right? No']
+    
+    embed = discord.Embed(description=f'**Question:** {question}\n**Answer:** {random.choice(responses)}', colour=0x8bc1a9)
+
+    await ctx.send(embed=embed)
